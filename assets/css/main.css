@@ -28,7 +28,7 @@
 
 .ui.cards>.card>.image>img {
     display: block;
-    width: 150px;
+    width: 250px;
     height: auto;
     border-radius: inherit;
 }
