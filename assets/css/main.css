@@ -8,9 +8,13 @@
     padding: 0;
     border: none;
     border-radius: .28571429rem;
-    transition: box-shadow .1s ease, transform .1s ease;
+    transition: all .1s ease;
     margin-right: 20px;
     cursor: pointer;
+}
+
+.ui.cards>.card:hover{
+    transform: scale(1.2);
 }
 
 .ui.cards>.card>.image {
@@ -28,7 +32,7 @@
 
 .ui.cards>.card>.image>img {
     display: block;
-    width: 250px;
+    width: 170px;
     height: auto;
     border-radius: inherit;
 }
@@ -93,4 +97,144 @@
     opacity: 0.4;
     transition: opacity .25s;
     border-radius: .28571429rem;
+}
+
+
+.st0 {
+    fill: #FFFFFF;
+}
+
+.st1 {
+    fill: #0E1317;
+}
+
+.st1,
+.st6 {
+    transition: all .3s ease-out;
+}
+
+.st1:hover {
+    r: 25;
+}
+
+.st6:hover {
+    r: 30;
+}
+
+.st2 {
+    font-family: inherit;
+}
+
+.st3 {
+    font-size: 14px;
+}
+
+.st4 {
+    font-family: inherit;
+    text-transform: uppercase !important;
+}
+
+.st5 {
+    font-size: 16px;
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+.st6 {
+    fill: #DCB66D;
+}
+
+.st7 {
+    fill: none;
+    stroke: #DCB66D;
+    stroke-miterlimit: 10;
+    animation: pulse-inner 2s infinite;
+}
+
+.st8 {
+    fill: none;
+    stroke: #DCB66D;
+    stroke-width: 0.8;
+    stroke-miterlimit: 10;
+    animation: pulse-outer 2s infinite;
+}
+
+.st9 {
+    fill: none;
+    stroke: #BDB7AC;
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+}
+
+.st10 {
+    fill: none;
+    stroke: #BDB7AC;
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 3.9994, 3.9994;
+}
+
+.st11 {
+    fill: none;
+    stroke: #DCB66D;
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 4;
+}
+
+.st12 {
+    fill: none;
+    stroke: #BDB7AC;
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 4;
+}
+
+.st13 {
+    fill: #BDB7AC;
+}
+
+.st14 {
+    fill: #DCB66D;
+}
+
+.st0,
+.st1,
+.st6 {
+    cursor: pointer;
+}
+
+.map-marker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+@keyframes pulse-inner {
+    0% {
+        r: 34.6;
+    }
+
+    100% {
+        r: 52.8;
+    }
+}
+
+@keyframes pulse-outer {
+    0% {
+        r: 34.6;
+    }
+
+    100% {
+        r: 76.1;
+    }
+}
+
+.credit {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
