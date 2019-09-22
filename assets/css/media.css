@@ -1,0 +1,41 @@
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px){
+    .map-container {
+        min-height: 90vh;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .map-container {
+        min-height: 110vh;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) { 
+    .map-container {
+        background-position-y: -100px;
+        min-height: 130vh;
+    }
+    .map-marker {
+        top: -100px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .map-container {
+        background-position-y: -45px;
+        background-position-x: -30px;
+        background-size: 120%;
+    }
+    .map-marker {
+        top: -45px;
+        left: -30px;
+        width: 120%;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}

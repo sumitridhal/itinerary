@@ -1,3 +1,26 @@
+body {
+    font-family: "Montserrat", "Segoe UI", "Roboto", "Helvetica Neue", "Noto Sans", sans-serif;
+    font-weight: 200;
+}
+
+.display-4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+small,
+.small {
+    font-weight: 300;
+}
+
+.navbar.absolute-top {
+    top: 0px;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    position: absolute;
+}
+
 .ui.cards>.card {
     max-width: 100%;
     position: relative;
@@ -13,7 +36,7 @@
     cursor: pointer;
 }
 
-.ui.cards>.card:hover{
+.ui.cards>.card:hover {
     transform: scale(1.2);
 }
 
@@ -127,6 +150,7 @@
 
 .st3 {
     font-size: 14px;
+    font-family: 'Playfair Display', serif;
 }
 
 .st4 {
@@ -204,9 +228,16 @@
     cursor: pointer;
 }
 
+.map-container {
+    background: url('../images/greece-map.png') center -45px no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+}
+
 .map-marker {
     position: absolute;
-    top: 0;
+    top: -45px;
     left: 0;
     width: 100%;
     height: auto;
@@ -237,4 +268,5 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: max-content;
 }
