@@ -1,7 +1,37 @@
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575px){
+@media (max-width: 575px) {
+    .left-img-container {
+        min-height: 70vh;
+    }
+
     .map-container {
         min-height: 90vh;
+    }
+
+    .map-container {
+        background-size: 150%;
+        background-position-x: -40px;
+        background-position-y: -30px;
+        min-height: 70vh;
+    }
+
+    .map-marker {
+        width: 150%;
+        top: -30px;
+        left: -40px;
+    }
+
+    .portrait-container {
+        height: 74px;
+        width: 300px;
+    }
+
+    .portrait-container .img-circle img {
+        width: 50%;
+    }
+
+    .ui.cards>.card>.image>img {
+        width: 100px;
     }
 }
 
@@ -13,29 +43,66 @@
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991px) { 
+@media (min-width: 768px) and (max-width: 991px) {
     .map-container {
-        background-position-y: -100px;
-        min-height: 130vh;
+        background-position-y: 0px;
+        min-height: 83vh;
     }
+
     .map-marker {
-        top: -100px;
+        top: 0px;
     }
+
+    .portrait-container {
+        height: 74px;
+        width: 400px;
+    }
+
+    .portrait-container .img-circle img {
+        width: 70%;
+    }
+
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1799px) {
     .map-container {
-        background-position-y: -45px;
-        background-position-x: -30px;
-        background-size: 120%;
+        background-position-y: -110px;
+        background-position-x: -10px;
+        background-size: 110%;
     }
+
     .map-marker {
-        top: -45px;
-        left: -30px;
-        width: 120%;
+        top: -110px;
+        left: -10px;
+        width: 110%;
+    }
+
+    .portrait-container {
+        height: 74px;
+        width: 430px;
+    }
+
+    .portrait-container .img-circle img {
+        width: 70%;
+    }
+
+    .ui.cards>.card>.image>img {
+        width: 142px;
     }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {}
+@media (min-width: 1800px) {
+    .display-4 {
+        font-size: 7.5rem;
+    }
+
+    .card-container-carousel {
+        padding-bottom: 65px;
+    }
+
+    .ui.cards>.card>.image>img {
+        width: 270px;
+    }
+}

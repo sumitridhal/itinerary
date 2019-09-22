@@ -36,10 +36,6 @@ small,
     cursor: pointer;
 }
 
-.ui.cards>.card:hover {
-    transform: scale(1.2);
-}
-
 .ui.cards>.card>.image {
     position: relative;
     display: block;
@@ -269,4 +265,85 @@ small,
     left: 50%;
     transform: translateX(-50%);
     width: max-content;
+    z-index: 99;
+}
+
+
+.card-container-carousel {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px 10px 50px 30px;
+}
+
+.card-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.ui.cards {
+    width: 250%;
+}
+
+.singleleftslide,
+.singlerightslide {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.singlerightslide {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 38%;
+    z-index: 6;
+    fill: #FFF;
+    opacity: 0.6;
+}
+
+.singleleftslide {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 10px;
+    top: 38%;
+    z-index: 6;
+    fill: #000000;
+    opacity: 0.6;
+
+}
+
+.removehover {
+    opacity: 0.3 !important;
+    cursor: default !important;
+}
+
+.portrait-container {
+    display: flex;
+    position: relative;
+    height: 100px;
+    width: 500px;
+}
+
+.portrait-container .img-circle {
+    position: absolute;
+}
+
+.portrait-container .img-circle img {
+    border-radius: 100%;
+}
+
+.left-img-container {
+    background: url('https://source.unsplash.com/2000x3000/?beach,drone,islands,greece') center bottom no-repeat;
+    background-size: cover;
+    min-height: 100vh;
 }
