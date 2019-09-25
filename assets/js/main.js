@@ -35,6 +35,7 @@ right.addEventListener('click', function () {
 
 circle.forEach((node) => {
     node.addEventListener('click', svgClick);
+    node.parentElement.querySelector('.st0').addEventListener('click', svgClick);
 })
 
 
@@ -47,14 +48,27 @@ function scrollRight() {
 }
 
 function svgClick(ev) {
-    var x = ev.target.cx.baseVal.value,
-        y = ev.target.cy.baseVal.value,
-        r = ev.target.r.baseVal.value;
+    var g = Snap("#svgElem"),
+        ball = g.select('#ball'),
+        path = g.select('#path'),
+        lenPath = Snap.path.getTotalLength(path.attr("d")),
+        path0Pos = path.getPointAtLength(0);
+
+    ballPosition(ball, path0Pos);
     removeST6();
-    ev.target.setAttribute('r', (r * 2).toFixed(1));
-    ev.target.classList.add('st6');
-    appendCircle(ev.target.parentElement.id, x, y, r * 3, 'st7');
-    appendCircle(ev.target.parentElement.id, x, y, r * 4, 'st8');
+    Snap.animate(0, lenPath, function (val) {
+        var pos = path.getPointAtLength(val);
+        ball.attr({
+            transform: 't' + [pos.x, pos.y] +
+                'r' + (pos.alpha - 90),
+            fill: '#DCB66D'
+        });
+    }, 4000, mina.easeinout, function () {
+        var targetNode = (ev.target.nodeName === 'text') ?
+            ev.target.parentElement.querySelector('.st1')
+            : ev.target;
+        addCircles(targetNode);
+    });
 }
 
 function appendCircle(id, x, y, r, cls) {
@@ -74,3 +88,23 @@ function removeST6() {
     st6.parentNode.removeChild(st6.parentNode.querySelector('.st7'));
     st6.parentNode.removeChild(st6.parentNode.querySelector('.st8'));
 }
+
+
+function ballPosition(ball, path0Pos) {
+    ball.attr({
+        transform: 't' + [path0Pos.x, path0Pos.y] +
+            'r' + (path0Pos.alpha - 90),
+            fill: '#DCB66D'
+    });
+}
+
+function addCircles(targetNode) {
+    var x = targetNode.cx.baseVal.value,
+        y = targetNode.cy.baseVal.value,
+        r = targetNode.r.baseVal.value;
+    targetNode.setAttribute('r', (r * 2).toFixed(1));
+    targetNode.classList.add('st6');
+    appendCircle(targetNode.parentElement.id, x, y, r * 3, 'st7');
+    appendCircle(targetNode.parentElement.id, x, y, r * 4, 'st8');
+}
+

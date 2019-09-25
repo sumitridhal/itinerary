@@ -1,11 +1,11 @@
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575px) {
     .left-img-container {
-        min-height: 120vh;
+        min-height: 40vh;
     }
 
     .map-container {
-        min-height: 90vh;
+        min-height: 120vh;
     }
 
     .map-container {
@@ -67,15 +67,15 @@
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1799px) {
     .map-container {
-        background-position-y: -110px;
+        background-position-y: -50px;
         background-position-x: -10px;
-        background-size: 110%;
+        background-size: 115%;
     }
 
     .map-marker {
-        top: -110px;
+        top: -50px;
         left: -10px;
-        width: 110%;
+        width: 115%;
     }
 
     .portrait-container {
